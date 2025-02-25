@@ -7,6 +7,7 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
+
 class Employee(models.Model):
     first_name = models.CharField(max_length=50, help_text="Employee's first name")
     last_name = models.CharField(max_length=50, help_text="Employee's last name")
