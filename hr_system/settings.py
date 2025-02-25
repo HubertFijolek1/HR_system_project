@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'hr'
+    'hr', 
+    'time_tracking',
+    'recruitment',
 ]
 
 MIDDLEWARE = [
