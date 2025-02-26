@@ -23,3 +23,13 @@ class CandidateTests(APITestCase):
         response = self.client.get(self.list_url, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 1)
+    def test_filter_candidates_by_last_name(self):
+        # Create multiple candidates
+        Candidate.objects.create(first_name="Alice", last_name="Smith", email="alice.smith@example.com")
+        Candidate.objects.create(first_name="Bob", last_name="Jones", email="bob.jones@example.com")
+        Candidate.objects.create(first_name="Charlie", last_name="Smith", email="charlie.smith@example.com")
+        
+        # Filter candidates with last_name 'Smith'
+        response = self.client.get(self.list_url + "?last_name=Smith", format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 2)
