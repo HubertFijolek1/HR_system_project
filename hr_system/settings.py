@@ -54,6 +54,7 @@ REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] = [
 ]
 
 MIDDLEWARE = [
+    'hr_system.middleware.RequestLoggingMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
