@@ -5,3 +5,4 @@ gunicorn
 drf-yasg
 django-filter
 
+reportlab
