@@ -5,4 +5,3 @@ from .serializers import TimeEntrySerializer
 class TimeEntryViewSet(viewsets.ModelViewSet):
     queryset = TimeEntry.objects.all()
     serializer_class = TimeEntrySerializer
-EOF
