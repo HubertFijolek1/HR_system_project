@@ -3,6 +3,10 @@ from .models import Candidate
 from .serializers import CandidateSerializer
 
 class CandidateViewSet(viewsets.ModelViewSet):
+    from django_filters.rest_framework import DjangoFilterBackend
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["last_name"]
+    pagination_class = None  # Replace None with your custom pagination class if needed
     
     from rest_framework.decorators import action
     from rest_framework.response import Response
