@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'hr', 
     'time_tracking',
     'recruitment',
+    'evaluations',
 ]
 
 MIDDLEWARE = [
