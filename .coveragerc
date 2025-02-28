@@ -1,0 +1,12 @@
+[run]
+branch = True
+source =
+    hr
+    recruitment
+    time_tracking
+    evaluations
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:
